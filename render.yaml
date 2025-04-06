@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: crud-django-nani
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn crudproj.wsgi:application"
+    plan: free
+    branch: master
+    region: oregon
