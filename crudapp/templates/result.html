@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .badge {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+        .pass {
+            background-color: #28a745; /* Green */
+        }
+        .fail {
+            background-color: #dc3545; /* Red */
+        }
+        @media(max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+            table, th, td {
+                font-size: 14px;
+                padding: 8px;
+            }
+            .badge {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Result</h2>
+
+        <table border="1" style="border-collapse:collapse; width:100%; text-align:center;">
+            <tr>
+                <th>Roll Number</th>
+                <th>Subject 1</th>
+                <th>Subject 2</th>
+            </tr>
+            <tr>
+                <td>{{ rno }}</td>
+                <td>{{ sub1 }}</td>
+                <td>{{ sub2 }}</td>
+            </tr>
+        </table>
+        
+
+        <div class="badge {% if status == 'PASS' %}pass{% else %}fail{% endif %}">
+            {{ status }}
+        </div>
+        
+        <br><br>
+        
+        <a href="/" style="text-decoration:none;">
+            <button style="padding:10px 20px; background:#007bff; color:white; border:none; border-radius:5px; cursor:pointer;">
+                Back to Home
+            </button>
+        </a>
+        
+    </div>
+
+</body>
+</html>

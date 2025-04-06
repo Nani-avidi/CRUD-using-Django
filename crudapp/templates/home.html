@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Operation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        input[type="text"] {
+            margin: 8px;
+            padding: 8px;
+            width: 200px;
+        }
+        input[type="submit"] {
+            margin: 5px;
+            padding: 8px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #45a049;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Student Record</h1>
+
+    <form action="/crud">
+        Roll No: <input type="text" name="rno"><br>
+        Subject 1: <input type="text" name="sub1"><br>
+        Subject 2: <input type="text" name="sub2"><br>
+
+        <input type="submit" value="Add" name="b">
+        <input type="submit" value="Delete" name="b">
+        <input type="submit" value="Update" name="b">
+        <input type="submit" value="Result" name="b">
+    </form>
+
+    <h1>{{ msg }}</h1>
+</div>
+
+</body>
+</html>
