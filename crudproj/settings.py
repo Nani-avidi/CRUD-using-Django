@@ -29,7 +29,8 @@ SECRET_KEY = 'django-insecure-674-0x#1bx-oeur_dcmy4-2%-@n_vlfi!qbe-wj&5+-^oertvn
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['crud-using-django-9g13.onrender.com'
+]
 
 
 # Application definition
