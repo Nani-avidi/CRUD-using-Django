@@ -2,11 +2,11 @@ services:
   - type: web
     name: crud-django-nani
     env: python
-    buildCommand: "./build.sh"
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py migrate
+      python manage.py collectstatic --noinput
     startCommand: "gunicorn crudproj.wsgi:application"
     plan: free
     branch: master
     region: oregon
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.12.2
